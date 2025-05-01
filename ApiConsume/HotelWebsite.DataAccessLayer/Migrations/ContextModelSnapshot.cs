@@ -22,6 +22,40 @@ namespace HotelWebsite.DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("HotelWebsite.EntityLayer.Concrete.About", b =>
+                {
+                    b.Property<int>("AboutID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutID"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CustomerCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StaffCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AboutID");
+
+                    b.ToTable("About");
+                });
+
             modelBuilder.Entity("HotelWebsite.EntityLayer.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
