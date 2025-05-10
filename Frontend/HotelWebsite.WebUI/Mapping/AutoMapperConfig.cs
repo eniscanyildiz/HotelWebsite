@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HotelWebsite.EntityLayer.Concrete;
 using HotelWebsite.WebUI.Dtos.AboutDto;
+using HotelWebsite.WebUI.Dtos.BookingDto;
 using HotelWebsite.WebUI.Dtos.LoginDto;
 using HotelWebsite.WebUI.Dtos.RegisterDto;
 using HotelWebsite.WebUI.Dtos.ServiceDto;
@@ -26,6 +27,9 @@ namespace HotelWebsite.WebUI.Mapping
             CreateMap<ResultStaffDto, Staff>().ReverseMap();
 
             CreateMap<CreateSubscribeDto, Subscribe>().ReverseMap();
+
+            CreateMap<CreateBookingDto, Booking>().ReverseMap();
+
         }
     }
 }
